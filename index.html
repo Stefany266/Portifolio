@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio | Seu Nome</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Meu Portfólio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero text-white text-center d-flex align-items-center">
+    <div class="container">
+      <h1 class="display-4">Olá, eu sou [Seu Nome]</h1>
+      <p class="lead">Estudante de tecnologia e desenvolvedor em formação na Alura.</p>
+    </div>
+  </header>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Projetos em Destaque</h2>
+      <div class="row g-4">
+
+        <!-- Card Projeto -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Projeto 1">
+            <div class="card-body">
+              <h5 class="card-title">Projeto 1</h5>
+              <p class="card-text">Uma breve descrição do projeto que você criou no curso.</p>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal1">Ver mais</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repita para mais projetos... -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal1Label">Detalhes do Projeto 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Descreva com mais detalhes como o projeto foi feito, quais ferramentas usou e o que aprendeu com ele.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOBRE MIM -->
+  <section id="sobre" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre Mim</h2>
+      <p class="text-center mx-auto" style="max-width: 800px;">
+        Sou apaixonado por tecnologia e estou em formação na Alura. Este portfólio é parte do meu processo de aprendizado. A cada projeto, evoluo um pouco mais e busco desenvolver soluções criativas e funcionais.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Fale Comigo</h2>
+      <div class="text-center">
+        <p>Email: <a href="mailto:seunome@email.com">seunome@email.com</a></p>
+        <p>GitHub: <a href="https://github.com/seuusuario" target="_blank">github.com/seuusuario</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>Desenvolvido com 💻 por [Seu Nome] • 2025</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
