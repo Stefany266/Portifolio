@@ -1,104 +1,386 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfólio | Seu Nome</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Stefy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Meu Portfólio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#projetos">Projetos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre mim</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-        </ul>
-      </div>
+    <div class="animated-bg">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-  </nav>
+    
+    <div class="cosmic-dots" id="cosmicDots"></div>
 
-  <!-- HERO SECTION -->
-  <header class="hero text-white text-center d-flex align-items-center">
-    <div class="container">
-      <h1 class="display-4">Olá, eu sou [Seu Nome]</h1>
-      <p class="lead">Estudante de tecnologia e desenvolvedor em formação na Alura.</p>
-    </div>
-  </header>
-
-  <!-- PROJETOS -->
-  <section id="projetos" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5">Projetos em Destaque</h2>
-      <div class="row g-4">
-
-        <!-- Card Projeto -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Projeto 1">
-            <div class="card-body">
-              <h5 class="card-title">Projeto 1</h5>
-              <p class="card-text">Uma breve descrição do projeto que você criou no curso.</p>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal1">Ver mais</button>
+    <header class="fixed w-full bg-black bg-opacity-70 backdrop-blur-md z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="avatar w-12 h-12 rounded-full overflow-hidden mr-4 relative">
+                    <img src="avatar.jpeg" alt="Avatar de Stefy" class="absolute w-full h-full object-cover" />
+                    <svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#a855f7" />
+                                <stop offset="100%" stop-color="#6366f1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="35" r="25" fill="url(#avatarGradient)" />
+                        <path d="M15,85 Q50,65 85,85 Q85,100 50,100 Q15,100 15,85 Z" fill="url(#avatarGradient)" />
+                    </svg>       
+                </div>
+                <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-indigo-400">Stefy</h1>
             </div>
-          </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#sobre" class="nav-link text-white hover:text-purple-400">Sobre</a></li>
+                    <li><a href="#habilidades" class="nav-link text-white hover:text-purple-400">Habilidades</a></li>
+                    <li><a href="#projetos" class="nav-link text-white hover:text-purple-400">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link text-white hover:text-purple-400">Contato</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- Repita para mais projetos... -->
+    <main class="content-wrapper">
+        <section id="sobre" class="hero-section futuristic-grid fade-in-section">
+            <div class="max-w-3xl mx-auto text-center px-4">
+                <div class="mb-8 inline-block">
+                    <h2 class="section-title text-4xl md:text-5xl font-bold mb-2 gradient-text">Stefy</h2>
+                    <p class="text-sm text-purple-400 uppercase tracking-widest">Desenvolvedora Web</p>
+                </div>
+                <div class="mb-8">
+                    <p class="text-xl leading-relaxed opacity-90">
+                        Olá, me chamo <span class="text-purple-400 font-semibold">Stefy</span> estudante de programação. Gosto de aprender coisas novas, explorar ideias e transformar códigos em algo útil e criativo. Aqui você encontra alguns dos meus projetos
+                    </p>
+                </div>
+                <div class="mt-10 flex justify-center">
+                    <a href="#projetos" class="px-8 py-3 bg-black bg-opacity-50 border border-transparent rounded-full text-white font-medium transition-all duration-300 shadow-lg hover:shadow-purple-500/30 relative overflow-hidden group">
+                        <span class="relative z-10 futuristic-text">Ver Projetos</span>
+                        <span class="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="habilidades" class="py-16 fade-in-section">
+            <div class="max-w-5xl mx-auto px-4">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center futuristic-text">Habilidades</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="skill-item bg-black bg-opacity-50 backdrop-blur-md rounded-xl p-6 flex flex-col items-center">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg shadow-lg skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white tech-icon" viewBox="0 0 384 512">
+                                <path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 futuristic-text">HTML</h3>
+                        <p class="text-center text-gray-300 text-sm">Linguagem de marcação para estruturar o conteúdo de páginas web, definindo elementos como textos, imagens e links.</p>
+                    </div>
+                    
+                    <div class="skill-item bg-black bg-opacity-50 backdrop-blur-md rounded-xl p-6 flex flex-col items-center">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg shadow-lg skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white tech-icon" viewBox="0 0 384 512">
+                                <path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 futuristic-text">CSS</h3>
+                        <p class="text-center text-gray-300 text-sm">Linguagem de estilização que permite criar layouts visualmente atrativos, com cores, fontes e animações personalizadas.</p>
+                    </div>
+                    
+                    <div class="skill-item bg-black bg-opacity-50 backdrop-blur-md rounded-xl p-6 flex flex-col items-center">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg shadow-lg skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white tech-icon" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 futuristic-text">JavaScript</h3>
+                        <p class="text-center text-gray-300 text-sm">Linguagem de programação que adiciona interatividade às páginas web, permitindo criar funcionalidades dinâmicas e responsivas.</p>
+                    </div>
+                    
+                    <div class="skill-item bg-black bg-opacity-50 backdrop-blur-md rounded-xl p-6 flex flex-col items-center">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg shadow-lg skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white tech-icon" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M27.5 162.2L9 187.1h90.5l6.9-130.7-78.9 105.8zM396.3 45.7L267.7 32l135.7 147.2-7.1-133.5zM112.2 218.3l-11.2-22H9.9L234.8 458zm2-31.2h284l-81.5-88.5L256.3 33zm297.3 9.1L277.6 458l224.8-261.7h-90.9zM415.4 69L406 56.4l.9 17.3 6.1 113.4h90.3zM113.5 93.5l-4.6 85.6L244.7 32 116.1 45.7zm287.7 102.7h-290l42.4 82.9L256.3 480l144.9-283.8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 futuristic-text">Scratch</h3>
+                        <p class="text-center text-gray-300 text-sm">Plataforma de programação visual que permite criar jogos e animações interativas através de blocos de código intuitivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projetos" class="py-16 fade-in-section">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center futuristic-text">Projetos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      </div>
-    </div>
-  </section>
+                    <div class="project-card bg-black bg-opacity-50 backdrop-blur-md rounded-xl overflow-hidden">
+                        <div class="h-56 overflow-hidden relative">
+                            <div class="project-image w-full h-full bg-gradient-to-br from-orange-500 to-blue-500 flex items-center justify-center">
+                                <svg viewBox="0 0 400 400" class="w-full h-full" id="monaliza">
+                                    <circle cx="200" cy="200" r="150" fill="#03A9F4" />
+                                    <circle cx="150" cy="150" r="30" fill="white" />
+                                    <circle cx="250" cy="150" r="30" fill="white" />
+                                    <circle cx="150" cy="150" r="10" fill="black" class="monaliza-eye" id="leftEye" />
+                                    <circle cx="250" cy="150" r="10" fill="black" class="monaliza-eye" id="rightEye" />
+                                    <line x1="150" y1="270" x2="250" y2="235" stroke="black" stroke-width="2" />
+                                    <polygon points="200,180 170,220 220,220" fill="#3F51B5" />
+                                    <line x1="123" y1="115" x2="178" y2="113" stroke="black" stroke-width="2" />
+                                    <line x1="225" y1="116" x2="279" y2="106" stroke="black" stroke-width="2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 gradient-text futuristic-text">Monaliza</h3>
+                            <p class="text-gray-300 mb-4">
+                                Projeto feito em p5.js onde a Monaliza mexe os olhos quando o usuário arrasta o mouse pela tela, criando uma interação divertida.
+                            </p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="px-3 py-1 bg-purple-900 bg-opacity-50 rounded-full text-xs text-purple-300">p5.js</span>
+                                <a href="https://editor.p5js.org/Stefany.s.s4455/full/f3xIvp0_W" class="text-purple-400 hover:text-purple-300 transition-colors duration-300">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </button>
+                                </a>                                
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card bg-black bg-opacity-50 backdrop-blur-md rounded-xl overflow-hidden">
+                        <div class="h-56 overflow-hidden relative">
+                            <div class="project-image w-full h-full flex items-center justify-center" style="background-color: rgb(23,178,178);">
+                                <div class="relative w-full h-full">
+                                    <div class="finish-line">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="emoji-racer emoji-racer-1 absolute top-1/4 text-4xl">🐇🦔</div>
+                                    <div class="emoji-racer emoji-racer-2 absolute top-3/4 text-4xl">🐢🦋</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 gradient-text futuristic-text">Corrida de Emojis</h3>
+                            <p class="text-gray-300 mb-4">
+                                Jogo divertido onde dois emojis competem em uma corrida. Ao clicar nas teclas A e S, os emojis andam até chegar na linha de chegada e ganhar.
+                            </p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="px-3 py-1 bg-purple-900 bg-opacity-50 rounded-full text-xs text-purple-300">p5.js</span>
+                                <a href="https://editor.p5js.org/Stefany.s.s4455/full/1rofLz7O5" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition-colors duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>                            
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-  <!-- MODAL -->
-  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modal1Label">Detalhes do Projeto 1</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <div class="project-card bg-black bg-opacity-50 backdrop-blur-md rounded-xl overflow-hidden">
+                        <div class="h-56 overflow-hidden relative">
+                            <div class="project-image w-full h-full bg-[#363636] flex items-center justify-center">
+                                <div class="relative w-full h-full">
+                                    <div class="finish-line">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="emoji-racer emoji-racer-1 absolute top-[75px] text-4xl">🌚</div>
+                                    <div class="emoji-racer emoji-racer-2 absolute top-[150px] text-4xl">🌛</div>
+                                    <div class="emoji-racer emoji-racer-3 absolute top-[225px] text-4xl">🌝</div>
+                                    <div class="emoji-racer emoji-racer-4 absolute top-[300px] text-4xl">🌜</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 gradient-text futuristic-text">Corrida de Emojis Parte 2</h3>
+                            <p class="text-gray-300 mb-4">
+                                Versão aprimorada com 4 emojis que andam com as teclas A, S, D e F, tornando a competição ainda mais divertida.
+                            </p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="px-3 py-1 bg-purple-900 bg-opacity-50 rounded-full text-xs text-purple-300">p5.js</span>
+                                <a href="https://editor.p5js.org/Stefany.s.s4455/full/xIFghZRNx" target="_blank" class="text-purple-400 hover:text-purple-300 transition-colors duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>                            
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 fade-in-section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center futuristic-text">Contato</h2>
+                <div class="bg-black bg-opacity-50 backdrop-blur-md rounded-xl p-8 border border-transparent" style="background: linear-gradient(#0a0118, #0a0118) padding-box, linear-gradient(135deg, rgba(168, 85, 247, 0.5), rgba(99, 102, 241, 0.2)) border-box;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <a href="https://github.com/Stefany266" class="contact-link flex items-center p-4 rounded-lg">
+                            <div class="w-12 h-12 mr-4 flex items-center justify-center bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white futuristic-text">GitHub</h3>
+                                <p class="text-gray-300">github.com/Stefany266</p>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:stefy20252023@gmail.com" class="contact-link flex items-center p-4 rounded-lg">
+                            <div class="w-12 h-12 mr-4 flex items-center justify-center bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white futuristic-text">Email</h3>
+                                <p class="text-gray-300">stefy20252023@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black bg-opacity-70 backdrop-blur-md py-8 mt-16 border-t border-purple-900">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2025 <span class="text-purple-400">Stefy</span>. Todos os direitos reservados.</p>
         </div>
-        <div class="modal-body">
-          <p>Descreva com mais detalhes como o projeto foi feito, quais ferramentas usou e o que aprendeu com ele.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    </footer>
 
-  <!-- SOBRE MIM -->
-  <section id="sobre" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Sobre Mim</h2>
-      <p class="text-center mx-auto" style="max-width: 800px;">
-        Sou apaixonado por tecnologia e estou em formação na Alura. Este portfólio é parte do meu processo de aprendizado. A cada projeto, evoluo um pouco mais e busco desenvolver soluções criativas e funcionais.
-      </p>
-    </div>
-  </section>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#sobre').classList.add('is-visible');
+            adjustHeroHeight();
+        });
 
-  <!-- CONTATO -->
-  <section id="contato" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Fale Comigo</h2>
-      <div class="text-center">
-        <p>Email: <a href="mailto:seunome@email.com">seunome@email.com</a></p>
-        <p>GitHub: <a href="https://github.com/seuusuario" target="_blank">github.com/seuusuario</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>Desenvolvido com 💻 por [Seu Nome] • 2025</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        function adjustHeroHeight() {
+            const heroSection = document.querySelector('.hero-section');
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const windowHeight = window.innerHeight;
+            
+            heroSection.style.minHeight = `${windowHeight}px`;
+            heroSection.style.paddingTop = `${headerHeight}px`;
+        }
+        
+        window.addEventListener('resize', adjustHeroHeight);
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            if (section.id !== 'sobre') { 
+                observer.observe(section);
+            }
+        });
+        
+        const animatedBg = document.querySelector('.animated-bg');
+        for (let i = 0; i < 10; i++) {
+            const span = document.createElement('span');
+            animatedBg.appendChild(span);
+        }
+        
+        const monaliza = document.getElementById('monaliza');
+        const leftEye = document.getElementById('leftEye');
+        const rightEye = document.getElementById('rightEye');
+        
+        if (monaliza && leftEye && rightEye) {
+            monaliza.addEventListener('mousemove', (e) => {
+                const rect = monaliza.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const moveX = (x / rect.width) * 10 - 5;
+                const moveY = (y / rect.height) * 10 - 5;
+                
+                leftEye.setAttribute('cx', 150 + moveX);
+                leftEye.setAttribute('cy', 150 + moveY);
+                rightEye.setAttribute('cx', 250 + moveX);
+                rightEye.setAttribute('cy', 150 + moveY);
+            });
+        }
+        
+        function createCosmicDots() {
+            const container = document.getElementById('cosmicDots');
+            const dotsCount = 100;
+            
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('cosmic-dot');
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                const size = Math.random() * 3 + 1;
+                
+                const opacity = Math.random() * 0.5 + 0.1;
+                
+                dot.style.left = `${x}%`;
+                dot.style.top = `${y}%`;
+                dot.style.width = `${size}px`;
+                dot.style.height = `${size}px`;
+                dot.style.opacity = opacity;
+                
+                const animationDuration = Math.random() * 3 + 2;
+                dot.style.animation = `pulse ${animationDuration}s infinite alternate ease-in-out`;
+                
+                container.appendChild(dot);
+            }
+        }
+        
+        createCosmicDots();
+    </script>
 </body>
 </html>
