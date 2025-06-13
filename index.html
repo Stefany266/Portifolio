@@ -6,6 +6,12 @@
     <title>Portfólio de Stefy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+    </style>
 </head>
 <body>
     <div class="animated-bg">
@@ -284,7 +290,14 @@
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#sobre').classList.add('is-visible');
+            
             adjustHeroHeight();
+            
+            setupNavigation();
+            
+            updateActiveNavLink();
+
+            checkScrollPosition();
         });
 
         function adjustHeroHeight() {
@@ -298,19 +311,57 @@
         
         window.addEventListener('resize', adjustHeroHeight);
         
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
+        function setupNavigation() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        
+                        history.pushState(null, null, targetId);
+                        
+                        updateActiveNavLink(targetId);
+                    }
                 });
             });
-        });
+        }
+        
+        function updateActiveNavLink(targetId = null) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            if (targetId) {
+                const activeLink = document.querySelector(`a[href="${targetId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            } else {
+                checkScrollPosition();
+            }
+        }
+        
+        function checkScrollPosition() {
+            const sections = document.querySelectorAll('section');
+            const scrollPosition = window.scrollY + window.innerHeight / 3;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    updateActiveNavLink(`#${section.id}`);
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkScrollPosition);
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -321,7 +372,7 @@
         }, { threshold: 0.1 });
         
         document.querySelectorAll('.fade-in-section').forEach(section => {
-            if (section.id !== 'sobre') { 
+            if (section.id !== 'sobre') {
                 observer.observe(section);
             }
         });
